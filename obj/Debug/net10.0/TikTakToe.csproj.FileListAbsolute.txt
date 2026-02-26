@@ -1,0 +1,14 @@
+/home/yudai/Codes/TikTakToe/bin/Debug/net10.0/TikTakToe
+/home/yudai/Codes/TikTakToe/bin/Debug/net10.0/TikTakToe.deps.json
+/home/yudai/Codes/TikTakToe/bin/Debug/net10.0/TikTakToe.runtimeconfig.json
+/home/yudai/Codes/TikTakToe/bin/Debug/net10.0/TikTakToe.dll
+/home/yudai/Codes/TikTakToe/bin/Debug/net10.0/TikTakToe.pdb
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.GeneratedMSBuildEditorConfig.editorconfig
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.AssemblyInfoInputs.cache
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.AssemblyInfo.cs
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.csproj.CoreCompileInputs.cache
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.dll
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/refint/TikTakToe.dll
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.pdb
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.genruntimeconfig.cache
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/ref/TikTakToe.dll
