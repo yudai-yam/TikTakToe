@@ -1,5 +1,11 @@
 using System;
 
+public enum Player
+{
+    Player1,
+    Player2
+}
+
 public class Board
 {
     private CellState[,] grid;
@@ -15,5 +21,20 @@ public class Board
             }
         }
         
+    }
+
+    public void UpdateBoard(int[,] move, Player player)
+    {
+        int row = move[0, 0];
+        int column = move[0, 1];
+
+        if (player == Player.Player1)
+        {
+            grid[row, column] = CellState.X;
+        }
+        else
+        {
+            grid[row, column] = CellState.O;
+        }
     }
 }

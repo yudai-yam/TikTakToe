@@ -31,7 +31,5 @@ class GameController
             // check the win condition
 
         }
-
     }
-
 }
