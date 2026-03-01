@@ -6,8 +6,11 @@ class Program
     {
         Console.WriteLine("Game started");
 
-        // start the UI
+        // start the Game 
         ConsoleUI ui = new ConsoleUI();
+
+        GameController gameController = new GameController(ui);
+        gameController.StartGame();
 
     }
 }
