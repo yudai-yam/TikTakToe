@@ -1,11 +1,5 @@
 using System;
 
-public enum Player
-{
-    Player1,
-    Player2
-}
-
 public class Board
 {
     private CellState[,] grid;
@@ -23,18 +17,19 @@ public class Board
         
     }
 
-    public void UpdateBoard(int[,] move, Player player)
+    public void UpdateBoard((int row, int column) move, CellState player)
     {
-        int row = move[0, 0];
-        int column = move[0, 1];
+        int row = move.row;
+        int column = move.column;
 
-        if (player == Player.Player1)
+        if (grid[row, column] == CellState.Empty)
         {
-            grid[row, column] = CellState.X;
+            grid[row, column] = player;
         }
         else
         {
-            grid[row, column] = CellState.O;
+            throw new InvalidOperationException("Cell is already occupied.");
         }
+
     }
 }

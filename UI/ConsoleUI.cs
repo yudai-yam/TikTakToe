@@ -15,7 +15,7 @@ class ConsoleUI : IGameUI
         Console.WriteLine("Drawing the board");
     }
 
-    public int[,] GetPlayerMove()
+    public (int row, int column) GetPlayerMove()
     {
         // ask for row
         Console.WriteLine("Please enter the row (0, 1, or 2):");
@@ -25,9 +25,7 @@ class ConsoleUI : IGameUI
         Console.WriteLine("Please enter the column (0, 1, or 2):");
         int column = InputValidation.GetUserIntInput();
 
-        int[,] input = { { row, column } };
-        
-        return input;
+        return (row, column);
     }
 
     public void ShowMessage(string message)

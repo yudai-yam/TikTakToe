@@ -1,4 +1,4 @@
-enum CellState {
+public enum CellState {
     Empty,
     X,
     O

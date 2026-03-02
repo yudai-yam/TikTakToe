@@ -4,6 +4,7 @@ class GameController
 {
     private readonly IGameUI _ui;
     private readonly Board _board;
+    private CellState _currentPlayer = CellState.X;
 
     public GameController(IGameUI ui)
     {
@@ -24,12 +25,14 @@ class GameController
         while (!isGameDone)
         {
             // get the user input
-            int[,] playerMove = _ui.GetPlayerMove();
+            (int row, int column) playerMove = _ui.GetPlayerMove();
 
             // update the board state
+            
 
             // check the win condition
 
+            // switch player
         }
     }
 }

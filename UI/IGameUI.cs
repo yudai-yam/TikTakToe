@@ -1,10 +1,10 @@
 using System;
 using System.Reflection.Metadata;
 
-interface IGameUI
+public interface IGameUI
 {
     // Define methods for the game UI here
-    int[,] GetPlayerMove();
+    (int row, int column) GetPlayerMove();
     void DrawBoard(Board board);
     void ShowMessage(string message);
 }
