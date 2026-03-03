@@ -46,7 +46,6 @@ class GameController
             {
                 _ui.ShowMessage($"Player {_currentPlayer} wins!");
                 isGameDone = true;
-                continue;
             }
 
             // switch player

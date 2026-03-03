@@ -14,7 +14,6 @@ class ConsoleUI : IGameUI
     public void DrawBoard(Board board)
     {
         CellState[,] grid = board.GetGrid();
-        Console.WriteLine("Drawing the board");
         Console.WriteLine("+---+---+---+");
         for (int r=0; r<3; r++)
         {

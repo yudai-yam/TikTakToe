@@ -35,7 +35,6 @@ public class Board
         if (target_cell == CellState.Empty)
         {
             grid[row, column] = player;
-            Console.WriteLine($"Updated board at ({row}, {column}) with {player}");
         }
         else
         {

@@ -15,7 +15,7 @@ public static class InputValidation
 
         while (!isValid)
         {
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
 
             if (int.TryParse(input, out number) && number >= 0 && number <= 2)
             {
