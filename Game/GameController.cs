@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 class GameController
 {
@@ -24,15 +25,34 @@ class GameController
 
         while (!isGameDone)
         {
+            _ui.ShowMessage($"Player {_currentPlayer}'s turn.");
+
             // get the user input
             (int row, int column) playerMove = _ui.GetPlayerMove();
 
             // update the board state
-            
+            try
+            {
+                _board.UpdateBoard(playerMove, _currentPlayer);
+            }
+            catch (Exception e)
+            {
+                _ui.ShowMessage(e.Message); 
+                continue;    
+            }
 
             // check the win condition
+            if (_board.HasWinner())
+            {
+                _ui.ShowMessage($"Player {_currentPlayer} wins!");
+                isGameDone = true;
+                continue;
+            }
 
             // switch player
+            _currentPlayer = _currentPlayer == CellState.X ? CellState.O : CellState.X;
+
+            // show current board state
         }
     }
 }
