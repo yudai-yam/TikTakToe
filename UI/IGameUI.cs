@@ -1,8 +1,10 @@
-using System;
+namespace TikTakToe.UI;
+using TikTakToe.Board;
 
-interface IGameUI
+public interface IGameUI
 {
     // Define methods for the game UI here
-    int GetUserInput();
-
+    (int row, int column) GetPlayerMove();
+    void DrawBoard(Board board);
+    void ShowMessage(string message);
 }

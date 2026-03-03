@@ -12,3 +12,4 @@
 /home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.pdb
 /home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.genruntimeconfig.cache
 /home/yudai/Codes/TikTakToe/obj/Debug/net10.0/ref/TikTakToe.dll
+/home/yudai/Codes/TikTakToe/obj/Debug/net10.0/TikTakToe.sourcelink.json

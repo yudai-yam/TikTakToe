@@ -1,4 +1,6 @@
-﻿using System;
+﻿namespace TikTakToe;
+using TikTakToe.UI;
+using TikTakToe.Game;
 
 class Program
 {
@@ -6,8 +8,11 @@ class Program
     {
         Console.WriteLine("Game started");
 
-        // start the UI
-        ConsoleUI ui = new ConsoleUI();
+        // start the Game 
+        IGameUI ui = new ConsoleUI();
+
+        GameController gameController = new GameController(ui);
+        gameController.StartGame();
 
     }
 }
