@@ -2,7 +2,7 @@ namespace TikTakToe.Game;
 using TikTakToe.UI;
 using TikTakToe.Board;
 
-class GameController
+internal class GameController
 {
     private readonly IGameUI _ui;
     private readonly Board _board;

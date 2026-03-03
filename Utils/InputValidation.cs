@@ -1,3 +1,4 @@
+namespace TikTakToe.Utils;
 public static class InputValidation
 {
     public static int GetUserIntInput()

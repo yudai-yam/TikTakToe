@@ -1,18 +1,19 @@
 namespace TikTakToe.UI;
 using TikTakToe.Board;
+using TikTakToe.Utils;
 
 /// <summary>
 /// implement interface IGameUi, responsible for console actions.
 /// </summary>
-class ConsoleUI : IGameUI
+internal class ConsoleUI : IGameUI
 {
     public void DrawBoard(Board board)
     {
         CellState[,] grid = board.GetGrid();
         Console.WriteLine("+---+---+---+");
-        for (int r=0; r<3; r++)
+        for (int r=0; r<Board.Size; r++)
         {
-            for (int c=0; c<3; c++)
+            for (int c=0; c<Board.Size; c++)
             {
                 Console.Write($"| {((grid[r, c] == CellState.Empty) ? ' ' : grid[r, c])} ");
             }
