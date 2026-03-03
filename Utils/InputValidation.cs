@@ -1,13 +1,5 @@
-using System;
-
 public static class InputValidation
 {
-    public static bool IsValidMove(int move, Board board)
-    {
-        // Implement validation logic here
-        return true;
-    }
-
     public static int GetUserIntInput()
     {
         int number = 0;

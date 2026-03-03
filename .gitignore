@@ -427,6 +427,6 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-obj/
-bin/
-.claude/
+obj/*
+bin/*
+.claude/*

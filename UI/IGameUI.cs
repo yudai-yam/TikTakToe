@@ -1,6 +1,3 @@
-using System;
-using System.Reflection.Metadata;
-
 public interface IGameUI
 {
     // Define methods for the game UI here

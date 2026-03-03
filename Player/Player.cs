@@ -1,17 +1,13 @@
-using System;
-
 public class Player : IPlayer
 {
-    private string _name;
     private readonly IGameUI _ui;
 
-    public Player(string name, IGameUI ui)
+    public Player(IGameUI ui)
     {
-        this._name = name;
         this._ui = ui;
     }  
     
-    public (int row, int column) GetMove(Board Board)
+    public (int row, int column) GetMove(Board board)
     {
        return _ui.GetPlayerMove(); 
     }

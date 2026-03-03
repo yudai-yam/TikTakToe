@@ -1,6 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
-
 class GameController
 {
     private readonly IGameUI _ui;
@@ -20,10 +17,8 @@ class GameController
     {
         // draw the initial board
         _ui.DrawBoard(_board);
-        // game loop
-        bool isGameDone = false;
 
-        while (!isGameDone)
+        while (true)
         {
             _ui.ShowMessage($"Player {_currentPlayer}'s turn.");
 
@@ -41,18 +36,26 @@ class GameController
                 continue;    
             }
 
+            // show current board state
+            _ui.DrawBoard(_board);
+
             // check the win condition
             if (_board.HasWinner())
             {
                 _ui.ShowMessage($"Player {_currentPlayer} wins!");
-                isGameDone = true;
+                break;
+            }
+
+            // check if it is full
+            if (_board.IsFull())
+            {
+                _ui.ShowMessage("It's a draw!");
+                break;
             }
 
             // switch player
             _currentPlayer = _currentPlayer == CellState.X ? CellState.O : CellState.X;
 
-            // show current board state
-            _ui.DrawBoard(_board);
         }
     }
 }

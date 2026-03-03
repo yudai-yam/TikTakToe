@@ -1,16 +1,8 @@
-using System;
-using System.Runtime.CompilerServices;
-
 /// <summary>
 /// implement interface IGameUi, responsible for console actions.
 /// </summary>
 class ConsoleUI : IGameUI
 {
-    public ConsoleUI()
-    {
-        Console.WriteLine("Console UI constructor initialized");
-    }
-
     public void DrawBoard(Board board)
     {
         CellState[,] grid = board.GetGrid();
