@@ -30,7 +30,6 @@ public class Board
         {
             throw new InvalidOperationException($"Cell is already occupied by {targetCell}");
         }
-
     }
 
     /// <summary>
