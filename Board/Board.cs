@@ -1,18 +1,13 @@
+namespace TikTakToe.Board;
+
 public class Board
 {
     private CellState[,] _grid;
+    const int size = 3;
 
     public Board()
     {
-        _grid = new CellState[3, 3];
-        // for (int i = 0; i < 3; i++)
-        // {
-        //     for (int j = 0; j < 3; j++)
-        //     {
-        //         _grid[i, j] = CellState.Empty;
-        //     }
-        // }
-        
+        _grid = new CellState[size, size];
     }
 
     public CellState[,] GetGrid()
@@ -47,7 +42,7 @@ public class Board
     public bool HasWinner()
     {
         // vertical
-        for (int i=0; i<3; i++)
+        for (int i=0; i<size; i++)
         {
             if (_grid[0, i] == _grid[1, i] && _grid[1, i] == _grid[2, i] && _grid[0, i] != CellState.Empty)
             {
@@ -56,7 +51,7 @@ public class Board
         }
 
         // horizontal
-        for (int i=0; i<3; i++)
+        for (int i=0; i<size; i++)
         {
             if (_grid[i, 0] == _grid[i, 1] && _grid[i, 1] == _grid[i, 2] && _grid[i, 0] != CellState.Empty)
             {
@@ -80,9 +75,9 @@ public class Board
 
     public bool IsFull()
     {
-        for (int i=0; i<3; i++)
+        for (int i=0; i<size; i++)
         {
-            for (int j=0; j<3; j++)
+            for (int j=0; j<size; j++)
             {
                 if (_grid[i, j] == CellState.Empty)
                 {

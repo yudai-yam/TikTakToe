@@ -1,3 +1,7 @@
+namespace TikTakToe.Player;
+using TikTakToe.Board;
+using TikTakToe.UI;
+
 public class Player : IPlayer
 {
     private readonly IGameUI _ui;

@@ -1,3 +1,6 @@
+namespace TikTakToe.UI;
+using TikTakToe.Board;
+
 /// <summary>
 /// implement interface IGameUi, responsible for console actions.
 /// </summary>

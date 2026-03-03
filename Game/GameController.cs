@@ -1,3 +1,7 @@
+namespace TikTakToe.Game;
+using TikTakToe.UI;
+using TikTakToe.Board;
+
 class GameController
 {
     private readonly IGameUI _ui;
@@ -30,7 +34,7 @@ class GameController
             {
                 _board.UpdateBoard(playerMove, _currentPlayer);
             }
-            catch (Exception e)
+            catch (InvalidOperationException e)
             {
                 _ui.ShowMessage(e.Message); 
                 continue;    

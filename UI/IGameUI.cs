@@ -1,3 +1,6 @@
+namespace TikTakToe.UI;
+using TikTakToe.Board;
+
 public interface IGameUI
 {
     // Define methods for the game UI here
