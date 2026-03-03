@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 /// <summary>
 /// implement interface IGameUi, responsible for console actions.
@@ -12,7 +13,17 @@ class ConsoleUI : IGameUI
 
     public void DrawBoard(Board board)
     {
+        CellState[,] grid = board.GetGrid();
         Console.WriteLine("Drawing the board");
+        Console.WriteLine("+---+---+---+");
+        for (int r=0; r<3; r++)
+        {
+            for (int c=0; c<3; c++)
+            {
+                Console.Write($"| {((grid[r, c] == CellState.Empty) ? ' ' : grid[r, c])} ");
+            }
+            Console.WriteLine("|\n+---+---+---+");
+        }
     }
 
     public (int row, int column) GetPlayerMove()

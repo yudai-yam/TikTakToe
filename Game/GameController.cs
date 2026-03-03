@@ -53,6 +53,7 @@ class GameController
             _currentPlayer = _currentPlayer == CellState.X ? CellState.O : CellState.X;
 
             // show current board state
+            _ui.DrawBoard(_board);
         }
     }
 }

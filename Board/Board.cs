@@ -20,6 +20,11 @@ public class Board
         
     }
 
+    public CellState[,] GetGrid()
+    {
+        return grid;
+    }  
+
     public void UpdateBoard((int row, int column) move, CellState player)
     {
         int row = move.row;
