@@ -10,10 +10,10 @@ public class Board
         _grid = new CellState[Size, Size];
     }
 
-    public CellState[,] GetGrid()
+    public CellState GetCell(int row, int column)
     {
-        return _grid;
-    }  
+        return _grid[row, column];
+    }
 
     public void UpdateBoard((int row, int column) move, CellState player)
     {

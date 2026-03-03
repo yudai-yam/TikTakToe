@@ -9,13 +9,12 @@ internal class ConsoleUI : IGameUI
 {
     public void DrawBoard(Board board)
     {
-        CellState[,] grid = board.GetGrid();
         Console.WriteLine("+---+---+---+");
         for (int r=0; r<Board.Size; r++)
         {
             for (int c=0; c<Board.Size; c++)
             {
-                Console.Write($"| {((grid[r, c] == CellState.Empty) ? ' ' : grid[r, c])} ");
+                Console.Write($"| {((board.GetCell(r, c) == CellState.Empty) ? ' ' : board.GetCell(r, c))} ");
             }
             Console.WriteLine("|\n+---+---+---+");
         }
