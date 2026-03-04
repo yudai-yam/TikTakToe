@@ -5,7 +5,7 @@ using TikTakToe.Utils;
 /// <summary>
 /// implement interface IGameUi, responsible for console actions.
 /// </summary>
-internal class ConsoleUI : IGameUI
+public class ConsoleUI : IGameUI
 {
     public void DrawBoard(Board board)
     {
